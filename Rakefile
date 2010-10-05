@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "backup_cleaner"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A command-line script for cleaning up old backups}
+    gem.description = %Q{A command-line script for cleaning up old backups}
     gem.email = "balexand@gmail.com"
     gem.homepage = "http://github.com/balexand/backup_cleaner"
     gem.authors = ["Brian Alexander"]
