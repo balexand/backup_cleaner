@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# run this script with --help for instructions
+
+$LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + '/../lib')
+
+require 'backup_cleaner'
+
+BackupCleaner::Cli.run

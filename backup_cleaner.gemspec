@@ -10,8 +10,10 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brian Alexander"]
   s.date = %q{2010-10-05}
+  s.default_executable = %q{backup_cleaner}
   s.description = %q{A command-line script for cleaning up old backups}
   s.email = %q{balexand@gmail.com}
+  s.executables = ["backup_cleaner"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -22,6 +24,8 @@ Gem::Specification.new do |s|
      "LICENSE",
      "README.rdoc",
      "Rakefile",
+     "VERSION",
+     "backup_cleaner.gemspec",
      "lib/backup_cleaner.rb",
      "test/helper.rb",
      "test/test_backup_cleaner.rb"
@@ -41,11 +45,17 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<activesupport>, [">= 3.0.0"])
+      s.add_runtime_dependency(%q<trollop>, [">= 0"])
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     else
+      s.add_dependency(%q<activesupport>, [">= 3.0.0"])
+      s.add_dependency(%q<trollop>, [">= 0"])
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     end
   else
+    s.add_dependency(%q<activesupport>, [">= 3.0.0"])
+    s.add_dependency(%q<trollop>, [">= 0"])
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
   end
 end
