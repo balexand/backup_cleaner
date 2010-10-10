@@ -10,7 +10,7 @@ Cleans up backup files or folders within the specified folder. The names of thes
 in a format like: YYYY-MM-DD. Any files/folders with names not matching this pattern will be left untouched. Between \
 today and <days> days ago, all backups will be kept. Between today and <weeks> weeks ago, weekly backups will be kept. For \
 all time, monthly backups will be kept. For weekly/monthly backups, the earliest available backup from the week/month will \
-be kept. For example, if daily backups are present then weekly backups will be from Sunday and monthly backups will be from\
+be kept. For example, if daily backups are present then weekly backups will be from Sunday and monthly backups will be from \
 the 1st of the month.
 
 This script can also handle backups from multiple projects in one directory as long as they are named differently. If files \
