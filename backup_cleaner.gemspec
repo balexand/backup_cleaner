@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brian Alexander"]
-  s.date = %q{2010-10-05}
+  s.date = %q{2010-10-09}
   s.default_executable = %q{backup_cleaner}
   s.description = %q{A command-line script for cleaning up old backups}
   s.email = %q{balexand@gmail.com}
@@ -26,7 +26,9 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "backup_cleaner.gemspec",
+     "bin/backup_cleaner",
      "lib/backup_cleaner.rb",
+     "lib/backup_cleaner/cli.rb",
      "test/helper.rb",
      "test/test_backup_cleaner.rb"
   ]

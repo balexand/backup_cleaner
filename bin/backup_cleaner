@@ -4,5 +4,6 @@
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + '/../lib')
 
 require 'backup_cleaner'
+require 'backup_cleaner/cli'
 
 BackupCleaner::Cli.run
