@@ -2,6 +2,7 @@ require 'active_support/time'
 require 'fileutils'
 require 'set'
 
+# See backup_cleaner/cli for API documentation
 module BackupCleaner
   DATE_PATTERN = /^(.*)(\d{4}[-\.]\d{2}[-\.]\d{2})(.*)$/
 
@@ -55,6 +56,10 @@ module BackupCleaner
   end
   private_class_method :first_by_date_property
 
+  # Returns a unique number identifying the week that this date is a memeber of. If
+  # date d1 is in a later week than d2, then week_ordering_number(d1) > week_ordering_number(d2).
+  # If d1 is in the same week as d2, then week_ordering_number(d1) == week_ordering_number(d2).
+  # Week number for adjacent weeks are not guaranteed to be adjacent to one another.
   def self.week_ordering_number(date)
     # cweek considers weeks to start on Monday; adjust so week starts on Sunday
     date += 1.day if date.wday == 0
@@ -62,6 +67,7 @@ module BackupCleaner
   end
   private_class_method :week_ordering_number
 
+  # Like week_ordering_number except for month instead of week.
   def self.month_ordering_number(date)
     date.month + date.year * 100
   end
